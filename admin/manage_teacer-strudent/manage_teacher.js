@@ -10,14 +10,14 @@ let teachers = [
     id: 1,
     name: "Dr. Ahmed Elsayed",
     email: "ahmed.e@uni.edu",
-    specializtion: "Computer Science",
+    specializtion: "مشروع التخرج",
     work_location: "KMA",
   },
   {
     id: 2,
     name: "Prof. Laila Kamal",
     email: "laila.k@uni.edu",
-    specializtion: "Computer Science",
+    specializtion: "محاسبة مالية",
     work_location: "KMA",
   },
 ];

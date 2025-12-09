@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="dashboard-container">
       <aside class="sidebar">
         <div class="sidebar-header">
           <h2>EduTrack</h2>
@@ -24,33 +24,33 @@
           <ul>
             <li>
               <a href="../upload-research/upload-research.html"
-                ><i class="fas fa-search"></i> الأبحاث</a
+                ><i class="fas fa-search"></i> Research</a
               >
             </li>
             <li>
               <a
                 href="../submit_course_evaluation/submit_course_evaluation.html"
-                ><i class="fas fa-star"></i> التقييمات</a
+                ><i class="fas fa-star"></i> Evaluations</a
               >
             </li>
             <li>
               <a href="../notification/notification.html"
-                ><i class="fas fa-star"></i> الاشعارات</a
+                ><i class="fas fa-bell"></i> Notifications</a
               >
             </li>
             <li>
               <a href="../ask_question/ask_question.html"
-                ><i class="fas fa-question-circle"></i> الأسئلة؟</a
+                ><i class="fas fa-question-circle"></i> Questions?</a
               >
             </li>
             <li>
               <a href="../student-settings/student-settings.html"
-                ><i class="fas fa-cog"></i> الإعدادات</a
+                ><i class="fas fa-cog"></i> Settings</a
               >
             </li>
             <li>
               <a href="../../index.html"
-                ><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a
+                ><i class="fas fa-sign-out-alt"></i> Logout</a
               >
             </li>
           </ul>
@@ -61,7 +61,7 @@
           <div class="student-details">
             <div>
               <p class="student-name">Student Name: Amer Ahmed</p>
-              <p class="student-id">Student Code : 8</p>
+              <p class="student-id">Student Code: 8</p>
             </div>
           </div>
         </header>
@@ -70,22 +70,47 @@
           <div class="card subjects-card">
             <h3 class="card-title">Course Materials</h3>
             <ul class="subjects-list">
-              <li>مشروع التخرج</li>
-              <li>محاسبة مالية</li>
-              <li>انظمة معلومات المؤسسات</li>
-              <li>الاعمال الالكترونية</li>
-              <li>الاحصاء التطبيقي</li>
+              <li dir="rtl">مشروع التخرج</li>
+              <li dir="rtl">محاسبة مالية</li>
+              <li dir="rtl">انظمة معلومات المؤسسات</li>
+              <li dir="rtl">الاعمال الالكترونية</li>
+              <li dir="rtl">الاحصاء التطبيقي</li>
             </ul>
           </div>
 
           <div class="card schedule-card">
             <h3 class="card-title">Schedule</h3>
-            <p>No schedule is available.</p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>المادة</th>
+                    <th>اليوم</th>
+                    <th>وقت البدء</th>
+                    <th>وقت الانتهاء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>مشروع التخرج</td>
+                    <td>السبت</td>
+                    <td>09:00 صباحاً</td>
+                    <td>11:00 صباحاً</td>
+                  </tr>
+                  <tr>
+                    <td>محاسبة مالية</td>
+                    <td>الأحد</td>
+                    <td>11:30 صباحاً</td>
+                    <td>01:30 ظهراً</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="card lectures-card">
             <div class="lectures-header">
-              <h3 class="card-title">Uploaded lectures</h3>
+              <h3 class="card-title">Uploaded Lectures</h3>
             </div>
 
             <table class="lectures-table">
@@ -100,19 +125,19 @@
               <tbody>
                 <tr>
                   <td>Ibrahim</td>
-                  <td>مشروع تخرج</td>
+                  <td dir="rtl">مشروع تخرج</td>
                   <td>2025-02-25 17:42:16</td>
                   <td><button class="btn btn-sm">Download</button></td>
                 </tr>
                 <tr>
                   <td>fatma Ahmed</td>
-                  <td>الاحصاء التطبيقي</td>
+                  <td dir="rtl">الاحصاء التطبيقي</td>
                   <td>2025-02-25 17:00:28</td>
                   <td><button class="btn btn-sm">Download</button></td>
                 </tr>
                 <tr>
                   <td>Eman Ahmed</td>
-                  <td>الاعمال الاكترونية</td>
+                  <td dir="rtl">الاعمال الاكترونية</td>
                   <td>2025-02-25 15:49:56</td>
                   <td><button class="btn btn-sm">Download</button></td>
                 </tr>
@@ -124,10 +149,10 @@
     </div>
 
     <script>
-      const downloadButtons = document.querySelectorAll(".btn btn-sm");
+      const downloadButtons = document.querySelectorAll(".btn.btn-sm"); // تم تصحيح المُحدد
       downloadButtons.forEach((button) => {
         button.addEventListener("click", function () {
-          alert(" Downloading the file is starting... ");
+          alert("Downloading the file is starting...");
         });
       });
     </script>

@@ -67,6 +67,7 @@ table {
 
 .table-container {
   overflow-x: auto;
+  box-shadow: 4px 4px 10px #ccc9c9;
 }
 
 .actions {
