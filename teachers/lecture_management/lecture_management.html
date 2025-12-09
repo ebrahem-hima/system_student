@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lecture_management.css" />
+    <link rel="stylesheet" href="../../global.css" />
+    <title>Lecture Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="border">
+        <div class="upload-section">
+          <h2>Lecture Management</h2>
+          <form id="upload-form">
+            <input type="file" class="input" id="file-upload-input" />
+            <button type="submit" class="btn">Uploading the lecture</button>
+          </form>
+        </div>
+      </div>
+      <div class="lectures-list">
+        <h2>Uploaded lectures</h2>
+        <ul id="uploaded-files-list">
+          <li>
+            <span class="file-name">Openings(1).mp4</span>
+            <button class="btn btn-sm">حذف</button>
+          </li>
+        </ul>
+      </div>
+      <a href="../teacher_dashboard/teacher_dashboard.html" class="btn btn-back"
+        >Going back</a
+      >
+    </div>
+  </body>
+</html>

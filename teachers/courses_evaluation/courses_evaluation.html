@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Evaluation</title>
+    <link rel="stylesheet" href="courses_evaluation.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <h2 class="black">Course Evaluations</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Student Name</th>
+          <th>Course</th>
+          <th>Rating</th>
+          <th>Comments</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <a class="btn btn-back" href="../teacher_dashboard/teacher_dashboard.html">
+      Back to Dashboard
+    </a>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const evaluationData = [
+          {
+            id: 1,
+            name: "Mohamed Ali",
+            course: "project",
+            rating: 5,
+            comments: "Nice course :)",
+            date: "2026-12-25",
+            time: "00:12:46",
+          },
+          {
+            id: 2,
+            name: "Salma saad",
+            course: "e-business",
+            rating: 4.5,
+            comments: "to7faa ya DR!!",
+            date: "2026-11-30",
+            time: "00:5:50",
+          },
+        ];
+
+        const tableBody = document.getElementById("table-body");
+
+        if (tableBody) {
+          evaluationData.forEach((item) => {
+            const row = `
+                        <tr>
+                            <td>${item.id}</td>
+                            <td>${item.name}</td>
+                            <td>${item.course}</td>
+                            <td>${item.rating}</td>
+                            <td>${item.comments}</td>
+                            <td>${item.date} ${item.time} </td>
+                        </tr>
+                    `;
+            tableBody.innerHTML += row;
+          });
+        } else {
+          console.error;
+        }
+      });
+    </script>
+  </body>
+</html>

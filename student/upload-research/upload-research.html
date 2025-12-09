@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="upload-research.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <div class="upload-container">
+      <h2>رفع البحث</h2>
+      <form id="uploadForm">
+        <div class="form-group">
+          <label class="txt-right" for="researchTitle">عنوان البحث</label>
+          <input type="text" id="researchTitle" name="researchTitle" required />
+        </div>
+
+        <div class="form-group">
+          <label class="txt-right" for="researchFile">رفع الملف</label>
+          <input
+            type="file"
+            id="researchFile"
+            name="researchFile"
+            accept=".pdf,.doc,.docx"
+            required
+          />
+          <p class="file-info">(PDF, DOC, DOCX) :نوع الملف</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">رفع البحث</button>
+        <a
+          type="button"
+          class="btn btn-back"
+          href="../student_dashboard/student_dashboard.html"
+        >
+          Back to Dashboard
+        </a>
+      </form>
+    </div>
+
+    <script>
+      const uploadForm = document.getElementById("uploadForm");
+      uploadForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const researchTitle = document.getElementById("researchTitle").value;
+        const researchFile = document.getElementById("researchFile").files[0];
+
+        if (researchTitle && researchFile) {
+          alert(`تم رفع البحث بنجاح!
+          العنوان: ${researchTitle}
+          اسم الملف: ${researchFile.name}`);
+
+          uploadForm.reset();
+        } else {
+          alert("الرجاء تعبئة جميع الحقول.");
+        }
+      });
+    </script>
+  </body>
+</html>
+<body></body>

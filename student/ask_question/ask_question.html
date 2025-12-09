@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask a question</title>
+    <link rel="stylesheet" href="ask_question.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="form-container">
+        <h2>Ask a question</h2>
+        <form id="question-form">
+          <div>
+            <label for="question-text">Your question</label>
+            <textarea
+              id="question-text"
+              placeholder="Write your question here...."
+              rows="4"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <a
+          class="btn btn-back"
+          href="../student_dashboard/student_dashboard.html"
+          >Back to Dashboard</a
+        >
+      </div>
+    </main>
+
+    <script>
+      const form = document.getElementById("question-form");
+      const questionInput = document.getElementById("question-text");
+
+      form.addEventListener("submit", function (event) {
+        if (questionInput.value.trim() === "") {
+          alert("You can't send an empty question!");
+        } else {
+          alert("  Your question was successfully answered..");
+          questionInput.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

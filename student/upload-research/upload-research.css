@@ -1,0 +1,88 @@
+/* CSS Styles */
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.upload-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.upload-container h2 {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 26px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right; /* محاذاة النصوص داخل كل مجموعة لليمين */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; /* لضمان أن الحجم لا يتجاوز الحدود */
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.file-info {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}

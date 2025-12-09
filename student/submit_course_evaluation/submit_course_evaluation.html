@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../global.css" />
+    <link href="submit_course_evaluation.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Submit Course Evaluation</h2>
+
+      <form id="evaluationForm">
+        <div class="form-group">
+          <label for="course">Select Course</label>
+          <select id="course" name="course">
+            <option value="">اختر المادة</option>
+            <option value="">مشروع التخرج</option>
+            <option value="">الاحصاء التطبيقي</option>
+            <option value="">محاسبة</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Rating</label>
+          <input style="width: 40%" type="number" class="input" />
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="Your feedback"
+          ></textarea>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn btn-add">Submit Evaluation</button>
+          <button type="button" class="btn btn-back">Back to Dashboard</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

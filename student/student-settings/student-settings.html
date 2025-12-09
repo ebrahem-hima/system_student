@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="student-settings.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <div class="content-overlay">
+      <div class="settings-card">
+        <h2>Settings</h2>
+
+        <form class="settings-form" id="userSettingsForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="input" type="text" id="username" value="User Name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              value="user@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              placeholder="•••••••••"
+            />
+            <a href="#" class="change-password-link">Change your password</a>
+          </div>
+
+          <button id="submitSettings" type="submit" class="btn btn-save">
+            Save Changes
+          </button>
+        </form>
+        <a
+          class="btn btn-back mt-20"
+          href="../student_dashboard/student_dashboard.html"
+          >Back to Dashboard</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

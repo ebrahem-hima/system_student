@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admin-settings.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Administrator settings</h2>
+
+      <form class="settings-form" id="adminSettingsForm">
+        <div class="form-group">
+          <label for="adminName">Administrator's name </label>
+          <input
+            class="input admin-settigns-input"
+            type="text"
+            id="adminName"
+            value="Mohamed Ali"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email </label>
+          <input
+            class="input admin-settigns-input"
+            type="email"
+            id="email"
+            value="mohamed.ali@admin.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">password </label>
+          <input
+            class="input admin-settigns-input"
+            type="password"
+            id="password"
+            placeholder="Leave blank for modification  "
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="notification">framework</label>
+          <input
+            class="input admin-settigns-input"
+            type="text"
+            id="notification"
+            value="System Manager"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="permissions">Powers</label>
+          <input
+            class="input admin-settigns-input"
+            type="text"
+            id="permissions"
+            value="Full"
+          />
+        </div>
+        <div class="settings-actions">
+          <button type="submit" class="btn">Modify data</button>
+          <a href="../admin_dashboard/admin_dashboard.html" class="btn btn-back"
+            >Back to Dashboard</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("adminSettingsForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        alert(`تم محاولة حفظ الإعدادات!
+        البريد الجديد: ${email}
+        كلمة المرور: ${
+          password ? "تم إدخال كلمة مرور جديدة" : "لم يتم تغييرها"
+        }`);
+      });
+    });
+  </script>
+</html>

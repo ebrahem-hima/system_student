@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions</title>
+    <link rel="stylesheet" href="student_questions.css" />
+    <link rel="stylesheet" href="../../global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h2>Questions</h2>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>StudentID</th>
+            <th>Student Name</th>
+            <th>Questions</th>
+            <th>Date</th>
+            <th>Reply</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody id="questions-body"></tbody>
+      </table>
+    </div>
+
+    <a class="btn btn-back" href="../admin_dashboard/admin_dashboard.html">
+      Back to dashboard
+    </a>
+
+    <script>
+      const questionsData = [
+        {
+          id: 1,
+          studentId: 6,
+          name: "Amr Nabih",
+          question: "Did we finish this course?",
+          date: "2025-02-25 00:11:19",
+          reply: "Not yet",
+          status: "Replied",
+        },
+      ];
+      const tableBody = document.getElementById("questions-body");
+      function renderTable() {
+        let rows = "";
+        questionsData.forEach((item) => {
+          rows += `
+            <tr>
+              <td>${item.id}</td>
+              <td>${item.studentId}</td>
+              <td>${item.name}</td>
+              <td>${item.question}</td>
+              <td style="direction:ltr; text-align: left;">${item.date}</td>
+              <td>${item.reply}</td>
+              <td><span class="btn btn-sm">${item.status}</span></td>
+            </tr>
+          `;
+        });
+        tableBody.innerHTML = rows;
+      }
+
+      document.addEventListener("DOMContentLoaded", renderTable);
+    </script>
+  </body>
+</html>

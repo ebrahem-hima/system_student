@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="view_research.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">Student research submitted</h1>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th># Student ID</th>
+              <th>Student name</th>
+              <th>Search title</th>
+              <th>Upload date</th>
+              <th>download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5" class="no-data-row">
+                No research has been submitted yet.....
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="actions-container">
+        <a class="btn" href="../teacher_dashboard/teacher_dashboard.html">
+          Return to Dashboard
+        </a>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const logoutButton = document.getElementById("logoutBtn");
+      const dashboardButton = document.getElementById("dashboardBtn");
+
+      logoutButton.addEventListener("click", function () {
+        alert("تم الضغط على زر تسجيل الخروج!");
+      });
+
+      dashboardButton.addEventListener("click", function () {
+        alert("تم الضغط على زر العودة إلى لوحة التحكم!");
+      });
+    });
+  </script>
+</html>

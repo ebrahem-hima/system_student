@@ -1,0 +1,16 @@
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-container {
+  overflow-x: auto;
+  box-shadow: 1px 1px 10px #b1afaf;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

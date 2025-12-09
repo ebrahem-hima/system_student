@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f8f9fa;
+  color: #34495e;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-header h2 {
+  font-size: 1.3rem;
+}
+
+.sidebar-nav ul {
+  list-style-type: none;
+  padding-top: 15px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  padding: 12px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 0.95rem;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.active a {
+  background-color: #34495e;
+}
+
+.sidebar-nav i {
+  margin-left: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.main-header {
+  margin-bottom: 20px;
+}
+
+.main-header h1 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+.welcome-section {
+  margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.welcome-section p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #7f8c8d;
+}
+
+.card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}

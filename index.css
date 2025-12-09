@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  background: #eeaeca;
+  background: radial-gradient(
+    circle,
+    rgb(243, 166, 199) 0%,
+    rgb(6, 23, 43) 100%
+  );
+}
+
+.welcome-header {
+  text-align: center;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login-box {
+  width: 400px;
+  height: fit-content;
+  padding: 20px 40px;
+  background-color: rgba(178, 25, 209, 0);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  text-align: center;
+  color: #f5f7f8;
+}
+.logo {
+  text-align: center;
+}
+.logo-image {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.links a {
+  color: #2c0035;
+  text-decoration: none;
+  padding: 13px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+@media (max-width: 768px) {
+  .content-overlay {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+  .welcome-header {
+    margin-bottom: 20px;
+  }
+  .welcome-text {
+    font-size: 3em;
+  }
+  .login-box {
+    /* padding: 30px 20px; */
+  }
+}
