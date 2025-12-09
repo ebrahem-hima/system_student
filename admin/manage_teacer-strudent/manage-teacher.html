@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Teachers</title>
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="manage_teacher-student.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2 class="txt-center">User Management</h2>
+      </header>
+
+      <div class="tabs">
+        <button class="tab-link active">Teachers</button>
+        <a href="manage_strudent.html" class="tab-link">Students</a>
+      </div>
+
+      <div class="toolbar">
+        <button class="btn btn-add" id="addTeacherBtn">Add Teacher</button>
+        <div class="table-controls">
+          <div class="search-container">
+            <label for="search">Search</label>
+            <input
+              class="input"
+              type="search"
+              id="search"
+              placeholder="Search Teachers..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="teachersTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>الاسم</th>
+              <th>الإيميل</th>
+              <th>المادة</th>
+              <th>المعهد</th>
+              <th>الإجراءات</th>
+            </tr>
+          </thead>
+          <tbody id="teachersBody"></tbody>
+        </table>
+      </div>
+
+      <a class="btn btn-back" href="../admin_dashboard/admin_dashboard.html"
+        >Back to Dashboard</a
+      >
+    </div>
+
+    <div id="teacherModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">
+          <p id="modalTitle">Add/Edit Teacher</p>
+          <span class="close">&times;</span>
+        </div>
+
+        <form id="teacherForm">
+          <input type="hidden" id="teacherId" />
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              style="width: 95%"
+              class="input"
+              type="text"
+              id="name"
+              required
+              placeholder="Enter teacher name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              style="width: 95%"
+              class="input"
+              type="email"
+              id="email"
+              required
+              placeholder="example@institute.edu"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="specializtion">specializtion</label>
+            <input
+              style="width: 95%"
+              class="input"
+              type="text"
+              id="specializtion"
+              required
+              placeholder="Database Systems"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="work_location">College / work location</label>
+            <input
+              style="width: 95%"
+              class="input"
+              type="text"
+              id="work_location"
+              required
+              placeholder="work location Name"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-sm">Save Data</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./manage_teacher.js"></script>
+  </body>
+</html>

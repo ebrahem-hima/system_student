@@ -33,8 +33,8 @@
           <input
             class="input"
             type="text"
-            id="admin"
-            placeholder="Admin"
+            id="name"
+            placeholder="Name"
             required
           />
           <!-- <br /> -->
@@ -66,17 +66,17 @@
       loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const admin = document.getElementById("admin").value;
+        const name = document.getElementById("name").value;
         // const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        console.log("Admin:", admin);
+        console.log("name:", name);
         console.log("Password:", password);
-        if (admin === "admin" && password === "123") {
+        if (name === "name" && password === "123") {
           window.location.href = "admin/admin_dashboard/admin_dashboard.html";
-        } else if (admin === "teacher" && password === "123") {
+        } else if (name === "teacher" && password === "123") {
           window.location.href =
             "teachers/teacher_dashboard/teacher_dashboard.html";
-        } else if (admin === "student" && password === "123") {
+        } else if (name === "student" && password === "123") {
           window.location.href =
             "student/student_dashboard/student_dashboard.html";
         } else {

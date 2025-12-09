@@ -38,8 +38,8 @@ function renderTable() {
           <td>${stu.period}</td>
           <td>${stu.institute}</td>
           <td class="actions">
-            <button class="btn btn-edit btn-sm" onclick="editUser(${stu.id})">تعديل</button>
-            <button class="btn btn-delete" onclick="deleteUser(${stu.id})" class="btn btn-delete btn-sm">حذف</button>
+            <button class="btn btn-edit btn-sm" onclick="editUser(${stu.id})">Edit</button>
+            <button class="btn btn-delete" onclick="deleteUser(${stu.id})" class="btn btn-delete btn-sm">Delete</button>
           </td>
           `;
     tableBody.appendChild(row);
@@ -49,7 +49,7 @@ renderTable();
 
 addBtn.addEventListener("click", function () {
   modal.style.display = "block";
-  modalTitle.innerText = "إضافة طالب جديد";
+  modalTitle.innerText = "Add new student";
   form.reset();
   document.getElementById("studentId").value = "";
 });
@@ -59,8 +59,8 @@ closeSpan.addEventListener("click", function () {
 });
 
 function deleteUser(id) {
-  if (confirm("هل أنت متأكد من حذف هذا الطالب؟")) {
-    students = students.filter((s) => s.id !== id);
+  if (confirm("Are you sure you want to delete this teacher?")) {
+    teachers = teachers.filter((t) => t.id !== id);
     renderTable();
   }
 }
@@ -68,7 +68,7 @@ function deleteUser(id) {
 function editUser(id) {
   const studentToEdit = students.find((s) => s.id == id);
   modal.style.display = "block";
-  modalTitle.innerText = "تعديل بيانات الطالب";
+  modalTitle.innerText = "Edit student information";
 
   document.getElementById("studentId").value = studentToEdit.id;
   document.getElementById("name").value = studentToEdit.name;
@@ -97,7 +97,7 @@ form.addEventListener("submit", function (e) {
     stu.institute = institute;
   } else {
     students.push({
-      id: Math.floor(Math.random() * 1000) + 30,
+      id: Math.floor(Math.random() * 10) + 1,
       name,
       email,
       framework,

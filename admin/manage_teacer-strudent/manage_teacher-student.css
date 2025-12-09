@@ -30,9 +30,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   color: #495057;
-  margin-left: 5px;
-  position: relative;
-  top: 2px;
+  text-decoration: none;
 }
 
 .tab-link.active {
@@ -55,12 +53,15 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .search-container {
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -75,10 +76,6 @@ body {
   align-items: center;
 }
 
-.footer-action {
-  display: flex;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -87,7 +84,6 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-title {
@@ -109,7 +105,6 @@ body {
   width: 50%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  direction: rtl;
 }
 
 .close {

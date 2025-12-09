@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>إدارة المستخدمين</title>
+    <title>Manage Users</title>
     <link rel="stylesheet" href="../../global.css" />
     <link rel="stylesheet" href="manage_teacher-student.css" />
   </head>
   <body>
     <div class="container">
       <header>
-        <h2 class="txt-center">إدارة المستخدمين</h2>
+        <h2 class="txt-center">User Management</h2>
       </header>
 
       <div class="tabs">
-        <button class="tab-link">المدرسين</button>
-        <button class="tab-link active">الطلاب</button>
+        <a href="manage-teacher.html" class="tab-link">Teachers</a>
+        <button href="manage_teacher-strudent.html" class="tab-link active">
+          Students
+        </button>
       </div>
 
       <div class="toolbar">
-        <button class="btn btn-add" id="addStudentBtn">إضافة طالب</button>
+        <button class="btn btn-add" id="addStudentBtn">Add Student</button>
         <div class="table-controls">
           <div class="search-container">
-            <label for="search">بحث</label>
-            <input type="search" id="search" />
+            <label for="search">Search:</label>
+            <input
+              class="input"
+              type="search"
+              id="search"
+              placeholder="Search Student..."
+            />
           </div>
         </div>
       </div>
@@ -35,9 +42,9 @@
               <th>ID</th>
               <th>الاسم</th>
               <th>الإيميل</th>
-              <th>الإطار (المرحلة)</th>
-              <th>الفترة (التاريخ)</th>
-              <th>الكلية / المعهد</th>
+              <th>المرحلة</th>
+              <th>الفترة</th>
+              <th>المعهد</th>
               <th>الإجراءات</th>
             </tr>
           </thead>
@@ -46,17 +53,15 @@
         </table>
       </div>
 
-      <div class="footer-action">
-        <a class="btn btn-back" href="../admin_dashboard/admin_dashboard.html"
-          >العودة إلى لوحة التحكم</a
-        >
-      </div>
+      <a class="btn btn-back" href="../admin_dashboard/admin_dashboard.html"
+        >Back to Dashboard</a
+      >
     </div>
 
     <div id="studentModal" class="modal">
       <div class="modal-content">
         <div class="modal-title">
-          <p id="modalTitle"></p>
+          <p id="modalTitle">Add/Edit Student</p>
           <span class="close">&times;</span>
         </div>
 
@@ -64,19 +69,19 @@
           <input type="hidden" id="studentId" />
 
           <div class="form-group">
-            <label class="txt-right" for="name">الاسم</label>
+            <label for="name">Name</label>
             <input
               style="width: 95%"
               class="input"
               type="text"
               id="name"
               required
-              placeholder="أدخل اسم الطالب"
+              placeholder="Enter student name"
             />
           </div>
 
           <div class="form-group">
-            <label class="txt-right" for="email">الإيميل</label>
+            <label for="email">Email</label>
             <input
               style="width: 95%"
               class="input"
@@ -88,19 +93,19 @@
           </div>
 
           <div class="form-group">
-            <label class="txt-right" for="framework">المرحلة / الإطار</label>
+            <label for="framework">Framework / Stage</label>
             <input
               style="width: 95%"
               class="input"
               type="text"
               id="framework"
               required
-              placeholder="مثال: طالب فرقة رابعة"
+              placeholder="Example: Fourth year student"
             />
           </div>
 
           <div class="form-group">
-            <label class="txt-right" for="period">الفترة / التاريخ</label>
+            <label for="period">Period / Date</label>
             <input
               style="width: 95%"
               class="input"
@@ -112,18 +117,18 @@
           </div>
 
           <div class="form-group">
-            <label class="txt-right" for="institute">الكلية / المعهد</label>
+            <label for="institute">College / Institute</label>
             <input
               style="width: 95%"
               class="input"
               type="text"
               id="institute"
               required
-              placeholder="اسم المعهد"
+              placeholder="Institute Name"
             />
           </div>
 
-          <button type="submit" class="btn btn-sm">حفظ البيانات</button>
+          <button type="submit" class="btn btn-sm">Save Data</button>
         </form>
       </div>
     </div>
